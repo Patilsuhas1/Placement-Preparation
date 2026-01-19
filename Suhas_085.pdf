@@ -1,0 +1,107 @@
+Q.1
+
+import java.util.*;
+class Main {
+    public static void ans(int n){
+        if(n%3==0&&n%7==0){
+            System.out.println("funbuzz");
+        }else if(n%3==0){
+            System.out.println("fun");
+        }else if(n%7==0){
+            System.out.println("buzz");
+        }
+    }
+    public static void ans2(int n){
+        if(n%3==0){
+            System.out.print("fun");
+        }
+        if(n%7==0){
+            System.out.println("buzz");
+        }
+    }
+    public static void main(String[] args) {
+        System.out.println("Enter The Number : ");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        ans2(n);
+    }
+}
+
+Q.2
+
+import java.util.*;
+class Main {
+    public static void oddrange(int n,int m){
+        for(int i=n;i<=m;i++){
+            if(i%2!=0){
+                System.out.println(i);
+            }
+        }
+    }
+    public static void oddrange2(int n,int m){
+        if(n%2==0){
+            n+=1;
+        }
+        for(int i=n;i<=m;i+=2){
+            System.out.println(i);
+        }
+    }
+    public static void main(String[] args) {
+        System.out.println("Enter First Num : ");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println("Enter Second Num : ");
+        int m = sc.nextInt();
+        oddrange2(n,m);
+    }
+}
+
+Q.3
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Enter The Number");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int sum = 0;
+        while(n>0){
+            int rem = n % 10;
+            sum*=10+rem;
+            n/=10;
+        }
+        if(sum == n){
+            System.out.println("true");
+        }else{
+            System.out.println("false");
+        }
+    }
+}
+
+Q.4
+
+
+import java.util.*;
+class Main {
+    public static void fibonacci(int N)
+    {
+        int n1 = 0, n2 = 1;
+        for (int i = 0; i < N; i++) {
+            System.out.print(n1 + " ");
+            int n3 = n2 + n1;
+            n1 = n2;
+            n2 = n3;
+        }
+    }
+    public static void main(String[] args) {
+        System.out.println("Enter The No");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        fibonacci(n);
+    }
+}
+
+
+
+
+
