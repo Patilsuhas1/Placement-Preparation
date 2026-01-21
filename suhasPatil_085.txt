@@ -1,0 +1,131 @@
+Q.1
+import java.util.*;
+
+public class SecondTest_085 {
+    public static int factorial(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        }
+        return n * factorial(n - 1);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Number : ");
+        int n = sc.nextInt();
+        int result = factorial(n);
+        System.out.println(result);
+        sc.close();
+    }
+}
+
+Q.2
+
+public class SecondTest_085 {
+    public static void fibonacci(int rows) {
+    int a = 1, b = 2;  
+    for (int i = 1; i <= rows; i++) {
+        for (int j = 1; j <= i; j++) {
+            System.out.print(a + " ");
+            int c = a + b;
+            a = b;
+            b = c;
+        }
+        System.out.println();
+    }
+}
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Number : ");
+        int n = sc.nextInt();
+        fibonacci(n);
+    }
+}
+
+
+Q.3/1
+
+import java.util.*;
+
+public class SecondTest_085 {
+    public static void printPattern(int n) {
+        for (int i = 1; i <= n; i++) {
+            for (int s = 1; s <= n - i; s++) {
+                System.out.print(" ");
+            }
+            for (int j = n; j >= n - i + 1; j--) {
+                System.out.print(j);
+            }
+            for (int j = n - i + 2; j <= n; j++) {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+        for (int i = n - 1; i >= 1; i--) {
+            for (int s = 1; s <= n - i; s++) {
+                System.out.print(" ");
+            }
+            for (int j = n; j >= n - i + 1; j--) {
+                System.out.print(j);
+            }
+            for (int j = n - i + 2; j <= n; j++) {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Number : ");
+        int n = sc.nextInt();
+        printPattern(n);
+    }
+}
+
+Q.3/2
+
+import java.util.*;
+
+public class SecondTest_085 {
+    public static void prontpattern2(int n){
+        for(int i=0;i<=n;i++){
+            for(int j=n;j>=i;j--){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Number : ");
+        int n = sc.nextInt();
+        prontpattern2(n);
+    }
+}
+
+
+Q.4
+
+import java.util.*;
+
+public class SecondTest_085 { 
+    public static void binaryof(int n){
+        String s = "";
+        int mod = 0;
+        while(n!=0){
+            mod = n % 2;
+            s+=mod;
+            n/=2;
+        }
+        System.out.print(s);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Number : ");
+        int n = sc.nextInt();
+        binaryof(n);
+    }
+}
+
