@@ -1,0 +1,88 @@
+Q.1
+public class OccurenceOfaWord {
+    public static void main(String[] args) {
+        String[] vehicles = { "Car", "Truck" };
+        String paragraph = "I have 2 Car one is Baleno Car and other is Farari Car but Truck is used for transportation.";
+        int carCount = 0;
+        int truckCount = 0;
+        String[] words = paragraph.split("\\W+");
+        for (String word : words) {
+            if (word.equalsIgnoreCase(vehicles[0])) {
+                carCount++;
+            } else if (word.equalsIgnoreCase(vehicles[1])) {
+                truckCount++;
+            }
+        }
+        System.out.println(carCount);
+        System.out.println(truckCount);
+    }
+}
+
+Q.2
+import java.util.Scanner;
+
+public class countoccurence {
+    public static int countOccurrences(String sentence, String word) {
+        String[] words = sentence.split("\\W+"); 
+        int count = 0;
+        for (String w : words) {
+            if (w.equalsIgnoreCase(word)) {
+                count++;
+            }
+        }
+        return count;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter sentence:");
+        String sentence = sc.nextLine();
+        System.out.println("Enter word:");
+        String word = sc.next();
+        int count = countOccurrences(sentence, word);
+        System.out.println(count);
+    }
+}
+
+Q.3
+import java.util.*;
+class company23_26{
+    static boolean palindrome(String str){
+        int start = 0;
+        int end = str.length() - 1;
+        while(start<end){
+            if(str.charAt(start)!=str.charAt(end)){
+                return false;
+            }
+            start++;
+            end--;
+        }
+        return true;
+    }
+   public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter The String : ");
+        String str = sc.nextLine();
+        System.out.println(palindrome(str));
+   }
+}
+
+Q.4
+import java.util.Scanner;
+class countWords{
+    static int wordcount(String str){
+        int count = 0;
+        char ch[] = str.toCharArray();
+        for(int i=0;i<ch.length;i++){
+            if(ch[i]!=' '){
+                count++;
+            }
+        }
+        return count;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the String");
+        String str = sc.nextLine();
+        System.out.println(wordcount(str));
+    }
+}
