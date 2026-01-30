@@ -1,0 +1,65 @@
+Test 8  :
+
+import java.util.HashMap;
+import java.util.Map;
+
+class test9{
+    static void countOccurence(String[] arr){
+        HashMap<String,Integer> map = new HashMap<>();
+        for(int i=0;i<arr.length;i++){
+            map.put(arr[i], map.getOrDefault(arr[i], 0)+1);
+        }
+         for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            System.out.println(entry.getKey() +"  "+entry.getValue());
+        }
+    }
+    public static void main(String[] args) {
+        String[] arr = { "A", "B", "C", "D", "E", "F", "F", "G", "A" };
+        countOccurence(arr);
+    }
+}
+
+Test 9 : 
+class Test10 {
+    static void removeduplicates(int arr[], int n) {
+        int temp[] = new int[n];
+        int uniqueCount = 0;
+        for (int i = 0; i < n; i++) {
+            boolean isDuplicate = false;
+            for (int j = 0; j < uniqueCount; j++) {
+                if (arr[i] == temp[j]) {
+                    isDuplicate = true;
+                    break;
+                }
+            }
+            if (!isDuplicate) {
+                temp[uniqueCount] = arr[i];
+                uniqueCount++;
+            }
+        }
+        for (int i = 0; i < n; i++) {
+            int count = 0;
+            for (int j = 0; j < uniqueCount; j++) {
+                if (arr[i] == temp[j]) {
+                    count++;
+                }
+            }
+            if (count > 1) {
+                temp[uniqueCount] = arr[i];
+                uniqueCount++;
+            }
+        }
+        for (int i = 0; i < n; i++) {
+            arr[i] = temp[i];
+        }
+    }
+    public static void main(String[] args) {
+        int arr[] = {58,26,91,26,70,70,91,58,58,58,66};
+        removeduplicates(arr, arr.length);
+        for(int i=0;i<arr.length;i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
+}
+
+
